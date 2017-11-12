@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+
+body {
+    background-color: #f7df88;
+    font-family: Helvetica;
+}
+h1 {
+        font-family: Helvetica;
+
+    }
+
+
+button {
+    color: white;
+    background-color: black;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    padding-top: 15px;
+    width: 100%
+}
+
+#line1 {
+    position: fixed;
+    display: inline;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#line2 {
+    position: fixed;
+    display: inline;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding-bottom: 140px;
+    padding-left: 50px;
+}
+
+#come{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding-top: 20px;
+    padding-right: 100px;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 2000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+</style>
+
+
+    <body>
+
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="trainer2.png\trainer2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="trainer.png 2\trainer.png" style="width:100%">
+        </div>
+
+
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+        <div id="line1" onclick="off()">
+            <div id="come">Come, exercise, and make friends.</div>
+        </div>
+
+        <div id="line2" onclick="off()">
+          <div id="header">Meet all CoExers here!</div>
+        </div>
+
+        <div style="padding:20px">
+
+        </div>
+
+        <script>
+        function on() {
+            document.getElementById("line1").style.display = "block";
+            document.getElementById("line2").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("line1").style.display = "none";
+            document.getElementById("line2").style.display = "none";
+        }
+        </script>
+
+        <br></br>
+
+
+        <button type = "button" value = "Write my own Post" name = "name" onclick = "window.location.href = 'Forum1.html'">Go To Forum</button>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <center><div class="btn-group">
+            <a href="login.html" class="btn btn-primary"><input type = "image" src = "lalala\lalala\weightlifting.png" alt= "Gym" height = "200em" width = "200em" hspace = 40></a>
+             <a href="Login.html" class="btn btn-primary"><input type = "image" src = "soccer\soccer.png" alt= "Soccer" height = "200em" width = "200em" hspace = 40></a>
+             <a href="Login.html" class="btn btn-primary"><input type = "image" src = "AMERICAN FOOTBALL.png\AMERICAN FOOTBALL.png" alt= "Football" height = "200em" width = "200em" hspace = 40></a>
+        </div>
+        <div class="btn-group">
+            <a href="Login.html" class="btn btn-primary"><input type = "image" src = "lalala\lalala\basketball.png" alt= "Basketball" height = "200em" width = "200em" hspace = 40></a>
+             <a href="Login.html" class="btn btn-primary"><input type = "image" src = "sport png\sport png\tennisball.png" alt= "Tennis" height = "200em" width = "200em" hspace = 40></a>
+             <a href="Login.html" class="btn btn-primary"><input type = "image" src = "sport png\sport png\badminton.png" alt= "Badminton" height = "200em" width = "200em" hspace = 40></a>
+        </div>
+        <div class="btn-group">
+            <a href="Login.html" class="btn btn-primary"><input type = "image" src = "sport png\sport png\baseball.png" alt= "Baseball" height = "200em" width = "200em" hspace = 40></a>
+             <a href="Login.html" class="btn btn-primary"><input type = "image" src = "sport png\sport png\volleyball.png" alt= "volleyball" height = "200em" width = "200em" hspace = 40></a>
+             <a href="Login.html" class="btn btn-primary"><input type = "image" src = "sport png\sport png\bowling.png" alt= "bowling" height = "200em" width = "200em" hspace = 40></a>
+        </div>
+
+        <br></br>
+
+        <br></br>
+
+    </body>
+    </html>

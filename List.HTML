@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel = "stylesheet"
+        href = "List.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        div {
+    bottom: 10px;
+    padding-top: 30px;
+}
+.button {
+    background-color: #173eed;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    /*text-align: center;*/
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    width: 150px;
+    margin: 10px 40px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.button:hover {
+    background-color: white; /* Green */
+    color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-facebook:hover {
+    background-color: black;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-twitter:hover {
+    background-color: black;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-instagram:hover {
+    background-color: black;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-linkedin:hover {
+    background-color: black;
+}
+.fa-github {
+    background: white;
+}
+.fa-github:hover {
+    background-color: black;
+}
+    table {
+        text-align: center;
+        vertical-align: middle;
+        font-family: Helvetica;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 40%;
+        border: 1px solid lightpink;
+    }
+
+
+    th, td {
+        text-align: center;
+        padding: 16px;
+        width: 10%;
+        border: 1px solid lightpink;
+    }
+
+    tr:nth-child(even) {
+    background-color: pink
+    }
+
+
+    button {
+        background-color: black;
+        color: white;
+        padding: 14px 20px;
+        margin: 10px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding-top: 15px;
+    }
+    .returntomain{
+        background-color: black;
+        text-align: left;
+        width: auto;
+        padding: auto;
+        margin-top: 0px;
+        font-size: 11px;
+    }
+    h2 {
+        font-family: Helvetica;
+    }
+
+</style>
+</head>
+<body>
+    <center><button type = "button"  class = "returntomain" value = "Return to Main Page" name = "name" onclick = "window.location.href = 'Main.html'"> Return to Main Menu</button></center>
+    <center><h2 style = "font-family: Helvetica"><font color = black> Click to view all the possible slots. Choose time and type of sport here. </font></h2></center>
+    <center><select id = SPORTS1>
+        <option value = "Sport"> Sport</option>
+        <option value = "Soccer"> Soccer</option>
+        <option value = "Basketball"> Basketball</option>
+        <option value = "Gym"> Gym</option>
+        <option value = "Football"> Football</option>
+        <option value = "Baseball"> Baseball</option>
+        <option value = "Swimming"> Swimming</option>
+        <option value = "Tennis"> Tennis</option>
+        <option value = "Badminton"> Badminton</option>
+        <option value = "Table Tennis"> Table Tennis</option>
+    </select>
+    <select id = TIME1>
+        <option value = "Time"> Time</option>
+        <option value = "8:00-10:00"> 8:00-10:00</option>
+        <option value = "10:00-12:00"> 10:00-12:00</option>
+        <option value = "12:00-14:00"> 12:00-14:00</option>
+        <option value = "14:00-16:00"> 14:00-16:00</option>
+        <option value = "16:00-18:00"> 16:00-18:00</option>
+        <option value = "18:00-10:00"> 18:00-20:00</option>
+        <option value = "20:00-22:00"> 20:00-22:00</option>
+        <option value = "22:00-24:00"> 22:00-24:00</option>
+    </select></center>
+    <br></br>
+    <center><table style="width:100%">
+        <center><tr>
+            <th>UserName</th>
+            <th>Time</th>
+            <th>Sport</th>
+          </tr></center>
+          <center><tr>
+            <td>Jill</td>
+            <td>8:00</td>
+            <td>Baseball</td>
+          </tr></center>
+          <center><tr>
+            <td>Eve</td>
+            <td>12:00</td>
+            <td>Basketball</td>
+          </tr></center>
+          <center><tr>
+            <td>John</td>
+            <td>22:00</td>
+            <td>Soccer</td>
+          </tr></center>
+        </table>
+    <button type = "button" value = "Submit" name = "name" onclick = "redirect2()"> Submit</button>
+    <div>
+            <a href="https://www.facebook.com/Kaijun.Elton.Lin" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/KLINNNNNJUN" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/klinelton"
+            class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/kaijun-lin-76823714b" class="fa fa-linkedin"></a>
+            <a href="https://github.com/Klin04" class="fa fa-github"></a>
+        </div>
+    <script type="text/javascript">
+            function redirect2() {
+                if (document.getElementById("SPORTS1").value == "Sport") {
+                    alert("Please enter a sport");
+                } else if (document.getElementById("TIME1").value == "Time") {
+                    alert("Please enter a time");
+                } else {
+                    location.href = "Thanks.html"
+                }
+            }
+    </script>
+</center>
+        </body>
+</html>
